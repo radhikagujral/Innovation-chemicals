@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Innovation Chemicals — Sugar Processing & Water Treatment Chemicals, Kanpur</title>
+<meta name="description" content="Innovation Chemicals, Kanpur — manufacturer of sugar processing chemicals and water treatment chemicals: mill sanitation biocides, colour precipitants, flocculants, viscosity reducers and seed slurry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1B5E2B;
+    --navy-dark:#123F1D;
+    --green:#1E7A35;
+    --green-light:#E7F3EA;
+    --amber:#C9821B;
+    --ink:#1C2630;
+    --muted:#55626E;
+    --line:#D5E3D8;
+    --bg:#F3F8F4;
+    --white:#FFFFFF;
+    --radius:10px;
+    --max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{font-family:"Noto Sans",Arial,sans-serif;font-size:18px;line-height:1.6;color:var(--ink);background:var(--white)}
+  a{color:var(--navy)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{line-height:1.25;color:var(--navy-dark)}
+  h2{font-size:32px;margin-bottom:10px}
+  .lead{font-size:19px;color:var(--muted);max-width:760px}
+  section{padding:72px 0}
+  .alt{background:var(--bg)}
+
+  /* Top strip */
+  .topbar{background:var(--navy-dark);color:#D7EADB;font-size:15px}
+  .topbar .wrap{display:flex;gap:28px;justify-content:flex-end;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .topbar a{color:#fff;text-decoration:none}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand-name{font-weight:700;font-size:22px;color:var(--navy-dark);line-height:1.1}
+  .brand-sub{font-size:13px;color:var(--muted);font-weight:500;letter-spacing:.3px}
+  nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+  nav a{text-decoration:none;font-weight:600;font-size:17px;color:var(--ink)}
+  nav a:hover{color:var(--green)}
+  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:600;font-size:17px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-primary:hover{background:#155C27}
+  .btn-outline{border-color:var(--navy);color:var(--navy);background:transparent}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+  .btn-white{background:#fff;color:var(--navy-dark)}
+  .menu-toggle{display:none;background:none;border:2px solid var(--line);border-radius:8px;padding:8px 14px;font-size:16px;font-weight:600;font-family:inherit;cursor:pointer}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,#EDF6EF 0%,#FFFFFF 100%);padding:80px 0 64px}
+  .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+  .eyebrow{display:inline-block;background:var(--green-light);color:var(--green);font-weight:600;font-size:15px;padding:6px 14px;border-radius:30px;margin-bottom:18px}
+  .hero h1{font-size:46px;margin-bottom:18px}
+  .hero p{font-size:20px;color:var(--muted);margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .facts{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:8px 28px}
+  .fact{display:flex;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .fact:last-child{border-bottom:none}
+  .fact b{font-size:34px;color:var(--navy);min-width:96px}
+  .fact span{color:var(--muted);font-size:17px}
+
+  /* Process stage strip */
+  .stages{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:36px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+  .stage{display:block;padding:24px 18px;text-decoration:none;color:var(--ink);border-right:1px solid var(--line);position:relative;transition:background .15s}
+  .stage:last-child{border-right:none}
+  .stage:hover{background:var(--green-light)}
+  .stage .num{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center;font-weight:700;font-size:16px;margin-bottom:12px}
+  .stage h3{font-size:18px;margin-bottom:4px}
+  .stage p{font-size:15px;color:var(--muted);line-height:1.45}
+  .stage .go{display:block;margin-top:10px;font-size:15px;font-weight:600;color:var(--green)}
+
+  /* Product groups */
+  .group{margin-top:56px}
+  .group:first-of-type{margin-top:40px}
+  .group-head{display:flex;align-items:center;gap:16px;padding-bottom:16px;border-bottom:3px solid var(--navy);margin-bottom:22px}
+  .group-head .num{flex:none;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:19px}
+  .group-head h3{font-size:26px}
+  .group-head p{font-size:16px;color:var(--muted)}
+  .products{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .product{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;display:flex;flex-direction:column}
+  .product .tag{font-size:14px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
+  .product h4{font-size:24px;color:var(--navy-dark);letter-spacing:.3px;margin-bottom:6px}
+  .product p{font-size:17px;color:var(--muted);margin-bottom:18px;flex:1}
+  .product .actions{display:flex;gap:10px;flex-wrap:wrap}
+  .product .btn{padding:10px 18px;font-size:16px}
+
+  .placeholder-box{background:#fff;border:2px dashed var(--line);border-radius:var(--radius);padding:28px;color:var(--muted)}
+
+  /* About / why */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .why-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .why-item h4{font-size:19px;color:var(--navy-dark);margin-bottom:6px}
+  .why-item p{font-size:16px;color:var(--muted)}
+  .about-text p{margin-bottom:16px}
+  .note{background:#FFF7E8;border-left:4px solid var(--amber);padding:12px 16px;font-size:15px;color:#6B4A12;border-radius:4px;margin-top:8px}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;margin-top:32px}
+  .contact-list{list-style:none}
+  .contact-list li{padding:18px 0;border-bottom:1px solid var(--line)}
+  .contact-list li:first-child{padding-top:0}
+  .contact-list .label{display:block;font-size:14px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+  .contact-list .value{font-size:20px;font-weight:600;color:var(--navy-dark)}
+  form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .field{margin-bottom:18px}
+  label{display:block;font-weight:600;font-size:16px;margin-bottom:6px}
+  input,select,textarea{width:100%;font-family:inherit;font-size:17px;padding:13px 14px;border:1.5px solid #B5C9B9;border-radius:8px;background:#fff;color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:3px solid #BFE0C6;border-color:var(--navy)}
+  textarea{min-height:110px;resize:vertical}
+  .form-msg{display:none;margin-top:14px;padding:14px;border-radius:8px;background:var(--green-light);color:var(--green);font-weight:600}
+
+  /* CTA band */
+  .cta{background:var(--navy);color:#fff;padding:48px 0}
+  .cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .cta h2{color:#fff;font-size:28px;margin:0}
+  .cta p{color:#CDE5D2}
+
+  footer{background:var(--navy-dark);color:#BFD8C4;padding:40px 0 28px;font-size:15px}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  footer a{color:#fff;text-decoration:none}
+  footer ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+
+
+  /* Owner, certifications, client logos */
+  .owner{display:flex;align-items:center;gap:16px;margin-top:22px;padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--green-light)}
+  .owner-avatar{flex:none;width:56px;height:56px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}
+  .owner strong{font-size:19px;color:var(--navy-dark)}
+  .owner span{font-size:16px;color:var(--muted)}
+  .certs{margin-top:56px;padding-top:40px;border-top:1px solid var(--line);text-align:center}
+  .certs h3{font-size:24px;margin-bottom:24px}
+  .cert-row{display:flex;justify-content:center;gap:56px;flex-wrap:wrap}
+  .cert{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .cert strong{font-size:18px;color:var(--navy-dark)}
+  .cert span{font-size:14px;color:var(--muted)}
+  .logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+  .logo-tile{height:110px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;font-size:16px;text-align:center;padding:12px}
+  @media (max-width:960px){.logo-grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* Mobile call bar */
+  .mobile-bar{display:none}
+
+  @media (max-width:960px){
+    .hero-grid,.two-col,.contact-grid{grid-template-columns:1fr}
+    .stages{grid-template-columns:1fr}
+    .stage{border-right:none;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+    .stage .num{flex:none;margin-bottom:0}
+    .products,.why{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+    h2{font-size:27px}
+    nav{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line)}
+    nav.open{display:block}
+    nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 18px}
+    nav li a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+    nav li:last-child a{border-bottom:none;margin-top:10px;text-align:center}
+    .menu-toggle{display:block}
+    .topbar .wrap{justify-content:flex-start;gap:16px}
+    section{padding:52px 0}
+    body{padding-bottom:64px}
+    .mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:60}
+    .mobile-bar a{padding:18px;text-align:center;font-weight:700;color:#fff;text-decoration:none;font-size:17px}
+    .mobile-bar a:first-child{background:var(--navy)}
+    .mobile-bar a:last-child{background:var(--green)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP STRIP (replace placeholders) ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <span>📍 Saket Nagar, Kanpur, Uttar Pradesh</span>
+    <span>📞 <a href="tel:+919415129244">+91 94151 29244</a></span>
+    <span>✉️ <a href="mailto:gujral.neeraj@gmail.com">gujral.neeraj@gmail.com</a></span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Innovation Chemicals home">
+      <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="#F1F1EE" stroke="#1B5E2B" stroke-width="1.5"/>
+        <circle cx="16" cy="12" r="3.6" fill="#1B5E2B"/>
+        <rect x="12.6" y="18" width="6.8" height="20" fill="#1B5E2B"/>
+        <path d="M36 25.5c-1.2-2.6-3.4-3.8-5.6-3.4-4 .7-6.4 5.6-5.6 10 .6 3.4 3.6 4.9 6.6 3.8 1.6-.6 2.9-1.8 3.8-3.2l-1.4-.8c-1 1.3-2.3 2.2-3.6 2.2-2 0-2.9-1.9-2.4-4.6.5-2.8 2.4-5.3 4.3-5 1.2.2 1.6 1.4 1.4 2.6z" fill="#1B5E2B"/>
+      </svg>
+      <span>
+        <span class="brand-name">Innovation Chemicals</span><br>
+        <span class="brand-sub">SUGAR PROCESS &amp; WATER TREATMENT CHEMICALS</span>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mainnav">☰ Menu</button>
+    <nav id="mainnav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn-primary" href="#contact">Send Enquiry</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Manufacturer since 1996 · Kanpur, Uttar Pradesh</span>
+      <h1>Process chemicals for sugar mills and water treatment</h1>
+      <p><strong style="color:var(--green)">Redefining Chemistry to Enhance Sweetness.</strong> Innovation Chemicals makes and supplies chemicals for each stage of sugar manufacturing, from mill sanitation to pan boiling and molasses storage.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#products">View Our Products</a>
+        <a class="btn btn-outline" href="#contact">Contact Us</a>
+      </div>
+    </div>
+    <!-- Replace these numbers with real figures -->
+    <div class="facts">
+      <div class="fact"><b>1996</b><span>Serving the sugar industry since</span></div>
+      <div class="fact"><b>XX+</b><span>Sugar mills served</span></div>
+      <div class="fact"><b>13</b><span>Specialised sugar process products</span></div>
+      <div class="fact"><b style="font-size:24px">ISO · Halal</b><span>Certified</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section class="alt" id="products">
+  <div class="wrap">
+    <h2>Our Products</h2>
+    <p class="lead">Our products are arranged by the stage of sugar manufacturing where they are used. Select a stage to go to its products.</p>
+
+    <div class="stages">
+      <a class="stage" href="#stage-1"><span class="num">1</span><div><h3>Mill Sanitation</h3><p>Biocides for mills &amp; juice</p><span class="go">4 products →</span></div></a>
+      <a class="stage" href="#stage-2"><span class="num">2</span><div><h3>Clarification</h3><p>Colour precipitants, settling &amp; flotation aids</p><span class="go">5 products →</span></div></a>
+      <a class="stage" href="#stage-3"><span class="num">3</span><div><h3>Pan Boiling</h3><p>Viscosity reducers &amp; seed slurry</p><span class="go">3 products →</span></div></a>
+      <a class="stage" href="#stage-4"><span class="num">4</span><div><h3>Molasses Storage</h3><p>Molasses preservation</p><span class="go">1 product →</span></div></a>
+      <a class="stage" href="#stage-5"><span class="num">5</span><div><h3>Water Treatment</h3><p>Boiler, cooling &amp; process water</p><span class="go">View →</span></div></a>
+    </div>
+
+    <!-- Stage 1 -->
+    <div class="group" id="stage-1">
+      <div class="group-head"><span class="num">1</span><div><h3>Mill Sanitation</h3><p>Controls bacterial growth in mills and juice to reduce sugar losses.</p></div></div>
+      <div class="products">
+        <div class="product">
+          <span class="tag">Biocide</span>
+          <h4>KILLBACT</h4>
+          <p>Biocide for mill sanitation.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="KILLBACT">Enquire</button><button class="btn btn-outline enquire" data-product="KILLBACT" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Biocide</span>
+          <h4>INOCIN</h4>
+          <p>Biocide for muddy juice.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOCIN">Enquire</button><button class="btn btn-outline enquire" data-product="INOCIN" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Biocide · Quaternary ammonium</span>
+          <h4>INOQUAT</h4>
+          <p>Quaternary ammonium–based biocide.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOQUAT">Enquire</button><button class="btn btn-outline enquire" data-product="INOQUAT" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Biocide · Dithiocarbamate</span>
+          <h4>INOCIDE</h4>
+          <p>Dithiocarbamate-based biocide.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOCIDE">Enquire</button><button class="btn btn-outline enquire" data-product="INOCIDE" data-tds="1">Request Data Sheet</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 2 -->
+    <div class="group" id="stage-2">
+      <div class="group-head"><span class="num">2</span><div><h3>Juice, Melt &amp; Filtrate Clarification</h3><p>For clearer juice and better colour: colour precipitants, settling aids and flotation aids.</p></div></div>
+      <div class="products">
+        <div class="product">
+          <span class="tag">Colour precipitant</span>
+          <h4>INOPOL</h4>
+          <p>Colour precipitant for cane juice.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOPOL">Enquire</button><button class="btn btn-outline enquire" data-product="INOPOL" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Colour precipitant</span>
+          <h4>INOLYTE RS</h4>
+          <p>Colour precipitant for melt clarification systems.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOLYTE RS">Enquire</button><button class="btn btn-outline enquire" data-product="INOLYTE RS" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Settling aid · Polyacrylamide</span>
+          <h4>INOFLOC 27</h4>
+          <p>Polyacrylamide-based settling aid.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOFLOC 27">Enquire</button><button class="btn btn-outline enquire" data-product="INOFLOC 27" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Flotation aid</span>
+          <h4>INOFLOC 22</h4>
+          <p>Flotation aid for the phosphoflotation process.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOFLOC 22">Enquire</button><button class="btn btn-outline enquire" data-product="INOFLOC 22" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Flotation aid</span>
+          <h4>INOFLOC 20</h4>
+          <p>Flotation aid for filtrate clarification systems.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOFLOC 20">Enquire</button><button class="btn btn-outline enquire" data-product="INOFLOC 20" data-tds="1">Request Data Sheet</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 3 -->
+    <div class="group" id="stage-3">
+      <div class="group-head"><span class="num">3</span><div><h3>Pan Boiling &amp; Crystallisation</h3><p>For better massecuite flow, faster boiling and even grain formation.</p></div></div>
+      <div class="products">
+        <div class="product">
+          <span class="tag">Viscosity reducer · Oil-based</span>
+          <h4>INOSURF 20</h4>
+          <p>Oil-based viscosity reducer.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOSURF 20">Enquire</button><button class="btn btn-outline enquire" data-product="INOSURF 20" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Viscosity reducer · Polymer-based</span>
+          <h4>INOSURF 22</h4>
+          <p>Polymer-based viscosity reducer.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="INOSURF 22">Enquire</button><button class="btn btn-outline enquire" data-product="INOSURF 22" data-tds="1">Request Data Sheet</button></div>
+        </div>
+        <div class="product">
+          <span class="tag">Seed slurry</span>
+          <h4>SUPER SEED FONDANT</h4>
+          <p>Seed slurry for initiating grain at the pans.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="SUPER SEED FONDANT">Enquire</button><button class="btn btn-outline enquire" data-product="SUPER SEED FONDANT" data-tds="1">Request Data Sheet</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 4 -->
+    <div class="group" id="stage-4">
+      <div class="group-head"><span class="num">4</span><div><h3>Molasses Storage</h3><p>Protects stored molasses from deterioration.</p></div></div>
+      <div class="products">
+        <div class="product">
+          <span class="tag">Enzymatic solution</span>
+          <h4>MOLCARE</h4>
+          <p>Enzymatic solution for preserving molasses.</p>
+          <div class="actions"><button class="btn btn-primary enquire" data-product="MOLCARE">Enquire</button><button class="btn btn-outline enquire" data-product="MOLCARE" data-tds="1">Request Data Sheet</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 5 -->
+    <div class="group" id="stage-5">
+      <div class="group-head"><span class="num">5</span><div><h3>Water Treatment Chemicals</h3><p>For boilers, cooling towers and process water.</p></div></div>
+      <div class="placeholder-box">
+        <strong>To be added:</strong> list of water treatment products (name and one-line use for each), in the same format as above.
+        <div style="margin-top:16px"><button class="btn btn-primary enquire" data-product="Water Treatment Chemicals">Enquire About Water Treatment</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap two-col">
+    <div class="about-text">
+      <h2>About Innovation Chemicals</h2>
+      <p>Innovation Chemicals has been manufacturing speciality chemicals for the sugar industry since 1996. We are based in Kanpur, Uttar Pradesh, and also supply water treatment chemicals.</p>
+      <p>[Add 2–3 lines on the manufacturing facility, the regions or mills served, and technical support such as on-site trials and dosage guidance.]</p>
+      <div class="owner">
+        <div class="owner-avatar">NG</div>
+        <div>
+          <strong>Mr. Neeraj Gujral</strong><br>
+          <span>Proprietor, Innovation Chemicals</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:24px;margin-bottom:18px">Why sugar mills work with us</h3>
+      <div class="why">
+        <div class="why-item"><h4>Since 1996</h4><p>Nearly three decades of serving sugar mills.</p></div>
+        <div class="why-item"><h4>Made in-house</h4><p>Our products are manufactured at our own facility.</p></div>
+        <div class="why-item"><h4>Technical support</h4><p>Guidance on dosage and application at your plant.</p></div>
+        <div class="why-item"><h4>Reliable supply</h4><p>Timely delivery through the crushing season.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="wrap">
+    <div class="certs">
+      <h3>Our Certifications</h3>
+      <div class="cert-row">
+        <div class="cert">
+          <svg viewBox="0 0 120 120" width="110" height="110" aria-hidden="true">
+            <circle cx="60" cy="60" r="56" fill="#fff" stroke="#1B5E2B" stroke-width="4"/>
+            <circle cx="60" cy="60" r="46" fill="none" stroke="#1B5E2B" stroke-width="1.5"/>
+            <text x="60" y="58" text-anchor="middle" font-family="Noto Sans,Arial" font-weight="700" font-size="22" fill="#1B5E2B">HALAL</text>
+            <text x="60" y="78" text-anchor="middle" font-family="Noto Sans,Arial" font-weight="600" font-size="12" fill="#1B5E2B" letter-spacing="1.5">CERTIFIED</text>
+          </svg>
+          <strong>Halal Certified</strong>
+          <span>[Certifying body · Cert. no.]</span>
+        </div>
+        <div class="cert">
+          <svg viewBox="0 0 120 120" width="110" height="110" aria-hidden="true">
+            <circle cx="60" cy="60" r="56" fill="#1B5E2B"/>
+            <circle cx="60" cy="60" r="46" fill="none" stroke="#fff" stroke-width="1.5"/>
+            <text x="60" y="62" text-anchor="middle" font-family="Noto Sans,Arial" font-weight="700" font-size="30" fill="#fff">ISO</text>
+            <text x="60" y="82" text-anchor="middle" font-family="Noto Sans,Arial" font-weight="600" font-size="12" fill="#fff" letter-spacing="1.5">CERTIFIED</text>
+          </svg>
+          <strong>ISO Certified</strong>
+          <span>[ISO 9001:2015 · Cert. no.]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLIENTS & PARTNERS ============ -->
+<section class="alt" id="clients">
+  <div class="wrap">
+    <h2>Our Clients</h2>
+    <p class="lead">Sugar mills and companies that use Innovation Chemicals products.</p>
+    <div class="logo-grid">
+      <div class="logo-tile">[Client 1]</div>
+      <div class="logo-tile">[Client 2]</div>
+      <div class="logo-tile">[Client 3]</div>
+      <div class="logo-tile">[Client 4]</div>
+      <div class="logo-tile">[Client 5]</div>
+      <div class="logo-tile">[Client 6]</div>
+      <div class="logo-tile">[Client 7]</div>
+      <div class="logo-tile">[Client 8]</div>
+    </div>
+
+    <h2 style="margin-top:64px">Our Partners</h2>
+    <p class="lead">Organisations we work with on supply, technology and distribution.</p>
+    <div class="logo-grid">
+      <div class="logo-tile">[Partner 1]</div>
+      <div class="logo-tile">[Partner 2]</div>
+      <div class="logo-tile">[Partner 3]</div>
+      <div class="logo-tile">[Partner 4]</div>
+    </div>
+    <div class="note" style="margin-top:20px">Replace each box with the client or partner's name or logo. Only list companies that have agreed to be shown.</div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<div class="cta">
+  <div class="wrap">
+    <div>
+      <h2>Need a product for your mill?</h2>
+      <p>Call us or send an enquiry and our team will get back to you.</p>
+    </div>
+    <a class="btn btn-white" href="#contact">Send Enquiry</a>
+  </div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section class="alt" id="contact">
+  <div class="wrap">
+    <h2>Contact Us</h2>
+    <p class="lead">For product enquiries, data sheets or pricing, contact us directly or fill in the form.</p>
+    <div class="contact-grid">
+      <ul class="contact-list">
+        <li><span class="label">Phone</span><a class="value" href="tel:+919415129244">+91 94151 29244</a></li>
+        <li><span class="label">WhatsApp</span><a class="value" href="https://wa.me/919415129244">+91 94151 29244</a></li>
+        <li><span class="label">Email</span><a class="value" href="mailto:gujral.neeraj@gmail.com">gujral.neeraj@gmail.com</a></li>
+        <li><span class="label">Contact person</span><span class="value">Mr. Neeraj Gujral (Proprietor)</span></li>
+        <li><span class="label">Address</span><span class="value">W-606, Shivlila Apartments, Saket Nagar<br>Kanpur, Uttar Pradesh – 208014</span></li>
+        <li><span class="label">Office hours</span><span class="value">Mon–Sat, 10:00 AM – 6:00 PM</span></li>
+      </ul>
+
+      <form id="enquiry" novalidate>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" required autocomplete="name"></div>
+        <div class="field"><label for="f-company">Sugar mill / company</label><input id="f-company" autocomplete="organization"></div>
+        <div class="field"><label for="f-phone">Phone number</label><input id="f-phone" type="tel" required autocomplete="tel"></div>
+        <div class="field">
+          <label for="f-product">Product</label>
+          <select id="f-product">
+            <option value="">Select a product (optional)</option>
+            <optgroup label="Mill Sanitation"><option>KILLBACT</option><option>INOCIN</option><option>INOQUAT</option><option>INOCIDE</option></optgroup>
+            <optgroup label="Clarification"><option>INOPOL</option><option>INOLYTE RS</option><option>INOFLOC 27</option><option>INOFLOC 22</option><option>INOFLOC 20</option></optgroup>
+            <optgroup label="Pan Boiling"><option>INOSURF 20</option><option>INOSURF 22</option><option>SUPER SEED FONDANT</option></optgroup>
+            <optgroup label="Molasses Storage"><option>MOLCARE</option></optgroup>
+            <optgroup label="Water Treatment"><option>Water Treatment Chemicals</option></optgroup>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" placeholder="Quantity required, plant capacity, or any question"></textarea></div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Send Enquiry</button>
+        <div class="form-msg" id="form-msg" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div>
+      <strong style="color:#fff;font-size:17px">Innovation Chemicals</strong><br>
+      Sugar process &amp; water treatment chemicals<br>W-606, Shivlila Apartments, Saket Nagar, Kanpur – 208014<br>+91 94151 29244 · gujral.neeraj@gmail.com
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="wrap" style="margin-top:20px;font-size:14px">© <span id="yr"></span> Innovation Chemicals. All rights reserved.</div>
+</footer>
+
+<!-- Mobile: fixed call / WhatsApp bar -->
+<div class="mobile-bar">
+  <a href="tel:+919415129244">📞 Call</a>
+  <a href="https://wa.me/919415129244">WhatsApp</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('mainnav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open'); toggle.setAttribute('aria-expanded', false);
+  }));
+
+  // "Enquire" / "Request Data Sheet" buttons pre-fill the contact form
+  document.querySelectorAll('.enquire').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const product = btn.dataset.product;
+      document.getElementById('f-product').value = product;
+      document.getElementById('f-msg').value = btn.dataset.tds
+        ? 'Please send the technical data sheet for ' + product + '.'
+        : 'I would like to know more about ' + product + '.';
+      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+      setTimeout(() => document.getElementById('f-name').focus({preventScroll:true}), 600);
+    });
+  });
+
+  // Form: not yet connected to email — show confirmation only
+  document.getElementById('enquiry').addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('f-name');
+    const phone = document.getElementById('f-phone');
+    const msg = document.getElementById('form-msg');
+    if (!name.value.trim() || !phone.value.trim()) {
+      msg.style.display = 'block';
+      msg.style.background = '#FDECEC'; msg.style.color = '#A12C2C';
+      msg.textContent = 'Please enter your name and phone number.';
+      return;
+    }
+    msg.style.display = 'block';
+    msg.style.background = ''; msg.style.color = '';
+    msg.textContent = 'Preview only: this form is not connected yet, so no enquiry has been sent.';
+  });
+</script>
+</body>
+</html>
