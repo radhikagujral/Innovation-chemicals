@@ -477,13 +477,15 @@
         <li><span class="label">Office hours</span><span class="value">Mon–Sat, 10:00 AM – 6:00 PM</span></li>
       </ul>
 
-      <form id="enquiry" novalidate>
-        <div class="field"><label for="f-name">Your name</label><input id="f-name" required autocomplete="name"></div>
-        <div class="field"><label for="f-company">Sugar mill / company</label><input id="f-company" autocomplete="organization"></div>
-        <div class="field"><label for="f-phone">Phone number</label><input id="f-phone" type="tel" required autocomplete="tel"></div>
+      <form id="enquiry" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="enquiry">
+        <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="f-company">Sugar mill / company</label><input id="f-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel"></div>
         <div class="field">
           <label for="f-product">Product</label>
-          <select id="f-product">
+          <select id="f-product" name="product">
             <option value="">Select a product (optional)</option>
             <optgroup label="Mill Sanitation"><option>KILLBACT</option><option>INOCIN</option><option>INOQUAT</option><option>INOCIDE</option></optgroup>
             <optgroup label="Clarification"><option>INOPOL</option><option>INOLYTE RS</option><option>INOFLOC 27</option><option>INOFLOC 22</option><option>INOFLOC 20</option></optgroup>
@@ -492,7 +494,7 @@
             <optgroup label="Water Treatment"><option>Water Treatment Chemicals</option></optgroup>
           </select>
         </div>
-        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" placeholder="Quantity required, plant capacity, or any question"></textarea></div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Quantity required, plant capacity, or any question"></textarea></div>
         <button class="btn btn-primary" type="submit" style="width:100%">Send Enquiry</button>
         <div class="form-msg" id="form-msg" role="status"></div>
       </form>
@@ -551,9 +553,10 @@
     });
   });
 
-  // Form: not yet connected to email — show confirmation only
-  document.getElementById('enquiry').addEventListener('submit', e => {
+  // Form: submitted to Netlify Forms (notifications set up in Netlify)
+  document.getElementById('enquiry').addEventListener('submit', async e => {
     e.preventDefault();
+    const form = e.target;
     const name = document.getElementById('f-name');
     const phone = document.getElementById('f-phone');
     const msg = document.getElementById('form-msg');
@@ -563,9 +566,19 @@
       msg.textContent = 'Please enter your name and phone number.';
       return;
     }
-    msg.style.display = 'block';
-    msg.style.background = ''; msg.style.color = '';
-    msg.textContent = 'Preview only: this form is not connected yet, so no enquiry has been sent.';
+    const btn = form.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(form)).toString()});
+      if (!res.ok) throw new Error(res.status);
+      msg.style.display = 'block'; msg.style.background = ''; msg.style.color = '';
+      msg.textContent = 'Thank you, ' + name.value.trim() + '. Your enquiry has been sent and we will contact you shortly.';
+      form.reset();
+    } catch (err) {
+      msg.style.display = 'block'; msg.style.background = '#FDECEC'; msg.style.color = '#A12C2C';
+      msg.textContent = 'Sorry, the enquiry could not be sent. Please call us on +91 94151 29244.';
+    }
+    btn.disabled = false; btn.textContent = 'Send Enquiry';
   });
 </script>
 </body>
