@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://innovation-chemicals.netlify.app/sitemap.xml
+Sitemap: https://innovationchemicals.netlify.app/sitemap.xml
