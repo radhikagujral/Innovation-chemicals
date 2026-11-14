@@ -160,6 +160,23 @@
   .logo-tile{min-height:96px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--green);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--navy-dark);font-weight:600;font-size:17px;line-height:1.35;text-align:center;padding:12px}
   @media (max-width:960px){.logo-grid{grid-template-columns:repeat(2,1fr)}}
 
+
+  /* Facility gallery */
+  .facility-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:270px 270px;gap:16px;margin-top:32px;
+    grid-template-areas:"lab lab reactor" "blend prod reactor"}
+  .fac{position:relative;margin:0;border-radius:var(--radius);overflow:hidden;background:#dfe7e1}
+  .fac img{width:100%;height:100%;object-fit:cover;display:block}
+  .fac-lab{grid-area:lab}.fac-reactor{grid-area:reactor}.fac-blend{grid-area:blend}.fac-prod{grid-area:prod}
+  .fac-prod img{object-position:center 40%}
+  .fac figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;color:#fff;
+    background:linear-gradient(to top,rgba(10,40,20,.85),rgba(10,40,20,0))}
+  .fac figcaption strong{display:block;font-size:18px}
+  .fac figcaption span{font-size:15px;opacity:.92}
+  @media (max-width:960px){
+    .facility-grid{grid-template-columns:1fr;grid-template-rows:none;grid-template-areas:"lab" "reactor" "blend" "prod"}
+    .fac{height:250px}
+  }
+
   /* Mobile call bar */
   .mobile-bar{display:none}
 
@@ -249,6 +266,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#about">About Us</a></li>
+        <li><a href="#facility">Facility</a></li>
         <li><a href="#clients">Clients</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a class="btn btn-primary" href="#contact">Send Enquiry</a></li>
@@ -468,6 +486,32 @@
           <span>Certificate No. E20250626719</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACILITY ============ -->
+<section id="facility">
+  <div class="wrap">
+    <h2>Our Facility</h2>
+    <p class="lead">Every product is made, tested and packed at our own plant in Panki Industrial Area, Kanpur.</p>
+    <div class="facility-grid">
+      <figure class="fac fac-lab">
+        <img src="images/facility/quality-lab.jpg" alt="In-house quality control laboratory with testing equipment" loading="lazy">
+        <figcaption><strong>Quality control lab</strong><span>Every batch is tested in-house before dispatch.</span></figcaption>
+      </figure>
+      <figure class="fac fac-reactor">
+        <img src="images/facility/reaction-plant.jpg" alt="Reaction and processing plant at the Panki factory" loading="lazy">
+        <figcaption><strong>Reaction plant</strong><span>Where our process chemicals are manufactured.</span></figcaption>
+      </figure>
+      <figure class="fac fac-blend">
+        <img src="images/facility/blending-unit.jpg" alt="Blending vessels and powder processing cyclone" loading="lazy">
+        <figcaption><strong>Blending &amp; powder processing</strong><span>Blending vessels and cyclone separator.</span></figcaption>
+      </figure>
+      <figure class="fac fac-prod">
+        <img src="images/facility/production-dispatch.jpg" alt="Production unit with packed product cans ready for dispatch" loading="lazy">
+        <figcaption><strong>Production &amp; packing</strong><span>Packed and ready for dispatch to mills.</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
